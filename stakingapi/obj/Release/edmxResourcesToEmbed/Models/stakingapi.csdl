@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="stakingapiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="stakingapiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="stk_admin" EntityType="stakingapiModel.stk_admin" />
+    <EntitySet Name="stk_users" EntityType="stakingapiModel.stk_users" />
+    <EntitySet Name="database_firewall_rules" EntityType="stakingapiModel.database_firewall_rules" />
+  </EntityContainer>
+  <EntityType Name="stk_admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reward_per_frequency" Type="Double" Nullable="false" />
+    <Property Name="private_key" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="public_address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="gas_limit" Type="Double" />
+    <Property Name="zinTokenAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="stkcontractAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="stk_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="metamask" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="zin_in_wallet" Type="Double" />
+    <Property Name="staked_zin" Type="Double" />
+    <Property Name="reward_percnetage" Type="Double" />
+    <Property Name="total_stk_percentage" Type="Double" />
+    <Property Name="reward_per_frequency" Type="Double" />
+    <Property Name="total_reward" Type="Double" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="start_ip_address" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="end_ip_address" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

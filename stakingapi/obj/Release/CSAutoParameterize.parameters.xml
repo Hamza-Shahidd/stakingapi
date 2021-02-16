@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="zinapiEntities-Web.config Connection String" description="zinapiEntities Connection String used in web.config by the application to access the database." defaultValue="provider=System.Data.SqlClient;provider connection string=&quot;data source=zinapisql.database.windows.net;initial catalog=stakingapi;user id=zinapiadmin;password=5UaZ7IzIz4pjTWhRoSLgwFxHvyJiV8be9Kk0lIGOIiM=;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\hp4444\\source\\repos\\stakingapi\\stakingapi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='zinapiEntities']/@connectionString" />
+  </parameter>
+  <parameter name="stakingapiEntities-Web.config Connection String" description="stakingapiEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.stakingapi.csdl|res://*/Models.stakingapi.ssdl|res://*/Models.stakingapi.msl;provider=System.Data.SqlClient;provider connection string='data source=zinapisql.database.windows.net;initial catalog=stakingapi;user id=zinapiadmin;password=&quot;5UaZ7IzIz4pjTWhRoSLgwFxHvyJiV8be9Kk0lIGOIiM=&quot;;multipleactiveresultsets=True;application name=EntityFramework'" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\hp4444\\source\\repos\\stakingapi\\stakingapi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='stakingapiEntities']/@connectionString" />
+  </parameter>
+</parameters>

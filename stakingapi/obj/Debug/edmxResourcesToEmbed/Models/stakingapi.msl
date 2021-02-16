@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="stakingapiModelStoreContainer" CdmEntityContainer="stakingapiEntities">
+    <EntitySetMapping Name="stk_admin">
+      <EntityTypeMapping TypeName="stakingapiModel.stk_admin">
+        <MappingFragment StoreEntitySet="stk_admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="reward_per_frequency" ColumnName="reward_per_frequency" />
+          <ScalarProperty Name="private_key" ColumnName="private_key" />
+          <ScalarProperty Name="public_address" ColumnName="public_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stk_users">
+      <EntityTypeMapping TypeName="stakingapiModel.stk_users">
+        <MappingFragment StoreEntitySet="stk_users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="metamask" ColumnName="metamask" />
+          <ScalarProperty Name="zin_in_wallet" ColumnName="zin_in_wallet" />
+          <ScalarProperty Name="staked_zin" ColumnName="staked_zin" />
+          <ScalarProperty Name="reward_percnetage" ColumnName="reward_percnetage" />
+          <ScalarProperty Name="total_stk_percentage" ColumnName="total_stk_percentage" />
+          <ScalarProperty Name="reward_per_frequency" ColumnName="reward_per_frequency" />
+          <ScalarProperty Name="total_reward" ColumnName="total_reward" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="database_firewall_rules">
+      <EntityTypeMapping TypeName="stakingapiModel.database_firewall_rules">
+        <MappingFragment StoreEntitySet="database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+          <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
